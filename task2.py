@@ -1,3 +1,18 @@
+#for any number of companies, 4 factor ratings can be inputed. 
+#the program will keep asking for 4 factor ratings unless a N is inouted. 
+#for all the inputed data. Program will outout the following
+#-----number of start-ups
+#-----start-up progression rate = ((total number of P1s) + (total number of P2s) + (total number of P3s)) / (total number of startups)
+#-----Average rating for Factor 1 
+#-----Average rating for Factor 2 
+#-----Average rating for Factor 3
+#-----Average rating for Factor 4
+#-----Average final rating
+#-----Number of P1s
+#-----Number of P2s
+#-----Number of P3s
+#-----Number of Rs
+
 num_start_up = 0
 weighting = [0.3, 0.3, 0.35, 0.05]
 factor_totals = [0, 0, 0, 0]
@@ -43,10 +58,10 @@ task2file = open("task2.txt","w")
 task2file.write("p1_names = " + str(p1_names) + "\np2_names = " + str(p2_names) + "\np3_names = " + str(p3_names) + "\nr_names = " + str(r_names) + "\n")
 print("Number of Start-ups:",num_start_up)
 print("Start-up progression rate: ",round(p_ratio),'%', sep='')
-print("Average rating for factor 1:",round(factor_totals[0]/num_start_up, 2))
-print("Average rating for factor 2:",round(factor_totals[1]/num_start_up, 2))
-print("Average rating for factor 3:",round(factor_totals[2]/num_start_up, 2))
-print("Average rating for factor 4:",round(factor_totals[3]/num_start_up, 2))
+print("Average rating for factor 1(Founder):",round(factor_totals[0]/num_start_up, 2))
+print("Average rating for factor 2(Industry):",round(factor_totals[1]/num_start_up, 2))
+print("Average rating for factor 3(Traction):",round(factor_totals[2]/num_start_up, 2))
+print("Average rating for factor 4(Gut):",round(factor_totals[3]/num_start_up, 2))
 print("Number of P1s:", end=' ')
 print(num_categories[0], *p1_names, sep=',')
 print("Number of P2s:", end=' ')
