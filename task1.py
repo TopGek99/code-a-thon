@@ -5,7 +5,7 @@
 # 2.5 - 4.0 = P2
 # 1.0 - 2.5 = P3
 # 0.0 - R   = P4 
-# So a start-up's four factor rating can be inputed. Program will output the final rating 
+# So a start-up's four factor rating can be input. Program will output the final rating 
 data = input("Enter a Start-up’s factor ratings (separated by comma):\n")
 dataset = data.split(',')
 start_up = dataset[0]
